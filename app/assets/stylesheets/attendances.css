@@ -1,0 +1,38 @@
+@keyframes glow {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    color: #000;
+  }
+
+  20% {
+    color: #533;
+  }
+
+  40% {
+    color: #c66;
+  }
+
+  60% {
+    color: #f88;
+  }
+
+  80% {
+    color: #633;
+  }
+
+  to {
+    color: #000;
+  }
+}
+
+.bounce-enter {
+  transform: scale3d(0.3, 0.3, 0.3);
+}
+.bounce-enter.bounce-enter-active {
+  transform: scale3d(1, 1, 1);
+  transition: all 1000ms cubic-bezier(0.37,-0.41,0.19,1.44);
+  animation-name: glow;
+}
