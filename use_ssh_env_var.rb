@@ -11,7 +11,7 @@ begin
   end
   puts 'about to run following:'
   puts "ssh ubuntu@#{ENV['AWS_DNS']} -v -f -i #{file.path} -o StrictHostKeyChecking=no -N -L 28015:#{ENV['AWS_IP']}:28015"
-  `ssh -v -f -i #{file.path} -o StrictHostKeyChecking=no -N ubuntu@#{ENV['AWS_DNS']}  -L 28015:#{ENV['AWS_IP']}:28015`
+  `ssh -vvv -f -i #{file.path} -o StrictHostKeyChecking=no -N ubuntu@#{ENV['AWS_DNS']}  -L 28015:#{ENV['AWS_IP']}:28015`
   puts 'please'
 ensure
   file.close
