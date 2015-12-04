@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 private
 
   def save_avatar
-    gh = Github::Client::Users.new(basic_auth: ENV['gh'])
+    gh = Github.new(basic_auth: ENV['gh'])
     self.avatar_url = gh.get(github).avatar_url
     save
   end
