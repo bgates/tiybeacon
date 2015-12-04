@@ -6,6 +6,7 @@
               <tr>
                 <td>{this.props.attendance.name}</td>
                 <td>{this.props.attendance.time}</td>
+                <td><img src={this.props.attendance.avatar_url}/></td>
               </tr>
           );
       }
@@ -43,6 +44,7 @@
                 <tr>
                   <th>Name</th>
                   <th>Time</th>
+                  <th>Pic</th>
                 </tr>
               </thead>
               <ReactCSSTransitionGroup component="tbody" transitionName="bounce" transitionEnterTimeout={1000} transitionLeaveTimeout={1000}>

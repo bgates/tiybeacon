@@ -4,7 +4,8 @@ class AttendancePresenter < Presenter
     {
       id:   @object.id,
       name: @object.name,
-      time: @object.created_at.strftime("%I:%M:%S")
+      time: @object.created_at.strftime("%I:%M:%S"),
+      avatar_url: @object.avatar_url
     }
   end
 end

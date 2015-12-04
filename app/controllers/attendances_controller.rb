@@ -6,7 +6,7 @@ class AttendancesController < ApplicationController
     @attendances = attendances_presenter
     respond_to do |format|
       format.html { render display_as_mobile? ? :mobile_index : :index }
-      format.json { render json: @attendances.to_json }
+      format.json { render json: @attendances }
     end
 
   end

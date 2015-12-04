@@ -22,5 +22,5 @@ gem 'puma'
 gem 'react-rails'
 gem 'quiet_assets'
 
-gem 'octokit'
+gem 'github_api'
 gem 'pg'

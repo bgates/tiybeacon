@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 private
 
   def attendances_presenter
-    AttendancesPresenter.new(Attendance.all).as_json
+    AttendancesPresenter.new(Attendance.includes(:user).all).as_json
   end
 
   def check_for_mobile
