@@ -31,7 +31,7 @@
     },
     componentDidMount: function(){
       this.loadAttendanceFromServer();
-      setInterval(this.loadAttendanceFromServer, 5000);
+      setInterval(this.loadAttendanceFromServer, 1000);
     },
     render: function() {
         var rows = this.state.data.map(function(attendance) {
