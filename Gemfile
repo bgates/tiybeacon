@@ -15,9 +15,14 @@ gem 'jbuilder', '~> 2.0'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
 
 end
 gem 'puma'
 gem 'nobrainer'
 gem 'react-rails'
 gem 'quiet_assets'
+gem 'figaro'
