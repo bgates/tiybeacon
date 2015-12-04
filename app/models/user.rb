@@ -9,7 +9,7 @@ private
 
   def save_avatar
     gh = Github.new(basic_auth: ENV['gh'])
-    self.avatar_url = gh.get(github).avatar_url
+    self.avatar_url = gh.users.get(user: github).avatar_url
     save
   end
   #field :name, :type => String
