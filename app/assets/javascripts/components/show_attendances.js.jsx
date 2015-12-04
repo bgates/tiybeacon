@@ -14,7 +14,7 @@
     name: 'AttendanceTable',
     loadAttendanceFromServer: function(){
       $.ajax({
-        url: 'http://localhost:3000/',
+        url: '/',
         dataType: 'json',
         cache: false,
         success: function(data){
