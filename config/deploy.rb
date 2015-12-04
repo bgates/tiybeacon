@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'ibeacon_demo'
+set :application, 'tiybeacon'
 set :repo_url, 'git@github.com:bgates/tiybeacon.git'
 
 # Default branch is :master

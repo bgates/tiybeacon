@@ -30,6 +30,7 @@ class UsersController < ApplicationController
       if @user.save
         session[:user_id] = @user.id
         format.html { redirect_to attendances_url, notice: "Welcome to the attendance app"}
+        format.json { render json: { user_id: @user.id } }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
