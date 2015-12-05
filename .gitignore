@@ -15,3 +15,5 @@
 /log/*
 !/log/.keep
 /tmp
+set_ssh_env_var.rb
+config/application.yml

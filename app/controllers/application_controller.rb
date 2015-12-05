@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
+  #protect_from_forgery with: :exception
 
 private
 
   def attendances_presenter
-    AttendancesPresenter.new(Attendance.all).as_json
+    AttendancesPresenter.new(Attendance.includes(:user).all).as_json
   end
 
   def check_for_mobile

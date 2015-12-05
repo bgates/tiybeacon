@@ -15,9 +15,12 @@ gem 'jbuilder', '~> 2.0'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'sqlite3'
 end
 gem 'puma'
-gem 'nobrainer'
+#gem 'nobrainer'
 gem 'react-rails'
 gem 'quiet_assets'
+
+gem 'github_api'
+gem 'pg'

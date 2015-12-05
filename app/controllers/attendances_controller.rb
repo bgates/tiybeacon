@@ -4,7 +4,11 @@ class AttendancesController < ApplicationController
 
   def index
     @attendances = attendances_presenter
-    render display_as_mobile? ? :mobile_index : :index
+    respond_to do |format|
+      format.html { render display_as_mobile? ? :mobile_index : :index }
+      format.json { render json: @attendances }
+    end
+
   end
 
   def create
@@ -23,6 +27,6 @@ private
   end
 
   def set_user
-    @current_user ||= User.find(session[:user_id])
+    @current_user ||= User.find(session[:user_id] || params[:user_id])
   end
 end
